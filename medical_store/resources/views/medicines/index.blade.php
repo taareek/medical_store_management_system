@@ -6,11 +6,32 @@
 
 @section('content')
 <div class="row">
-    <div class="col-12">
+    <div class="col-6">
         <h1>Medicine List</h1>
-        <p><a href="medicines/create">Add New Mediicne</a></p>
     </div>
 </div>
+<br>
+<div class="row">
+    <div class="col-6">
+    <p><a href="medicines/create">Add New Mediicne</a></p>
+    </div>
+</div>
+<div class="row">
+        <div class="col-6" >
+        <form action="" class="form-inline">
+            <div class="form-group">
+            <input type="search" name="search" value="" class="form-control" placeholder="search medicine">   
+            </div>
+
+            <div class="col-3">
+                <button type="submit" class= "btn btn-primary mt-2" style="align:right">
+                    search
+                </button> 
+            </div>    
+        </form>
+    </div>
+</div>
+
 <br>
 <div class="row">
             <div class="col-2">

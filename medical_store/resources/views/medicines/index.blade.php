@@ -20,7 +20,7 @@
         <div class="col-6" >
         <form action="" class="form-inline">
             <div class="form-group">
-            <input type="search" name="search" value="" class="form-control" placeholder="search medicine">   
+            <input type="search" name="search" value="{{$search}}" class="form-control" placeholder="search medicine">   
             </div>
 
             <div class="col-3">

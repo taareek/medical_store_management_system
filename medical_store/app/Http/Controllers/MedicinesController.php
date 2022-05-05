@@ -11,11 +11,18 @@ use Illuminate\Http\Request;
 class MedicinesController extends Controller
 {
     //index function to show data in home page(medicine list)
-    public function index(){
+    public function index(Request $request){
 
-        $medicines = Medicine::all();
+        $search = $request['search'] ?? "";
+        if($search != ""){
+            //where 
+            $medicines = Medicine::where('medicine_name', 'LIKE', "$search%")->get();
+        }else{
+            $medicines = Medicine::all();
+        }
+        // $medicines = Medicine::all();
     
-        return view('medicines.index', compact('medicines'));
+        return view('medicines.index', compact('medicines', 'search'));
     }
 
     //create function for form input

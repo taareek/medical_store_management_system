@@ -56,4 +56,6 @@ Route::delete('orders/{order}', 'OrderController@destroy');
 //Categories
 
 // sales
-Route::view('/sales', 'sales');
+// Route::view('/sales', 'sales');
+Route::get('sales', 'Sales@index');
+Route::get('sales/monthly', [App\Http\Controllers\Sales::class, 'monthlyStatistics'])->name('sales/monthly');

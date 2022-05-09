@@ -58,4 +58,5 @@ Route::delete('orders/{order}', 'OrderController@destroy');
 // sales
 // Route::view('/sales', 'sales');
 Route::get('sales', 'Sales@index');
-Route::get('sales/monthly', [App\Http\Controllers\Sales::class, 'monthlyStatistics'])->name('sales/monthly');
+// creating a route to view reports
+Route::post('check/report', 'Sales@checkReport')->name('sales.check.report');

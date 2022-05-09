@@ -9,6 +9,7 @@ class Order extends Model
     //
     protected $guarded = [];
     protected $table ="orders";
+    protected $dateFormat = 'Y-m-d';
     
     //making relationship with medicine
     public function medicine(){
